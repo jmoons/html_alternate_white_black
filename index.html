@@ -1,1 +1,42 @@
-<!-- Hello -->
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        margin: 0px;
+        background-color: #0000FF;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script type="text/javascript">
+
+      var state                = false;
+      var should_display_black = { true: "#000000", false: "#FFFFFF" };
+
+      document.addEventListener("DOMContentLoaded", function() {
+
+        // Set initial background color of white
+        toggle_background_color();
+
+        window.setInterval( toggle_background_color, 10000, );
+      });
+
+      function toggle_background_color() {
+        set_background_color( should_display_black[state] );
+        toggle_state();
+      }
+
+      function set_background_color( new_color ) {
+        document.querySelector('body').style.backgroundColor = new_color;
+      }
+
+      function toggle_state() {
+        state = !state;
+      }
+
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>
