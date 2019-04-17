@@ -10,7 +10,7 @@
     </style>
     <script type="text/javascript">
 
-      var state                = false;
+      var color_state          = false;
       var should_display_black = { true: "#000000", false: "#FFFFFF" };
 
       document.addEventListener("DOMContentLoaded", function() {
@@ -22,7 +22,7 @@
       });
 
       function toggle_background_color() {
-        set_background_color( should_display_black[state] );
+        set_background_color( should_display_black[color_state] );
         toggle_state();
       }
 
@@ -31,7 +31,7 @@
       }
 
       function toggle_state() {
-        state = !state;
+        color_state = !color_state;
       }
 
     </script>
